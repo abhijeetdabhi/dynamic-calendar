@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="calendar.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- title -->
+    <title>Calendar</title>
+</head>
+<body onload="renderDate()">
+    
+    <div class="wrapper">
+        <div class="calendar">
+            <div class="month">
+                <div class="prev" onclick="moveMonth('prev')">
+                    <span>&#10094</span>
+                </div>
+                <div>
+                    <h2 id="currentMonth"></h2>
+                    <p id="dateStr"></p>
+                </div>
+                <div class="next" onclick="moveMonth('next')">
+                    <span>&#10095</span>
+                </div>
+            </div>
+            <div class="weekend">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="dates"></div>
+        </div>
+    </div>
+
+
+    <!-- link to javascript -->
+    <script src="calendar.js"></script>
+</body>
+</html>

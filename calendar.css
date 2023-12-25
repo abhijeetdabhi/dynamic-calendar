@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: #dfe6e9;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.calendar{
+    margin: auto;
+    width: 650px;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.month{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 40px 30px;
+    background-color: #2ecc71;
+}
+
+.weekend{
+    display: flex;
+    background-color: #27ae60;
+    color: white;
+    padding: 7px 0;
+}
+
+.weekend div{
+    width: 14.28%;
+    text-align: center;
+}
+
+.dates{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.dates span{
+    width: 14.28%;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.dates span:hover{
+    background-color: #dfe6e9;
+}
+.dates span:nth-child(1),
+.dates span:nth-child(8),
+.dates span:nth-child(15),
+.dates span:nth-child(22),
+.dates span:nth-child(29),
+.dates span:nth-child(36){
+    color: red;
+}
+
+.today{
+    color: white;
+    pointer-events: none;
+    background-color: #27ae60;
+}
+
+.sunday{
+    color: red;
+}
+
+.prev_date{
+    color: #999;
+}
+
+#month{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.prev,
+.next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.prev:hover,
+.next:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
